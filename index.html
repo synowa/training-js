@@ -5,12 +5,31 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    
+
+    <script type="text/javascript">
+        const check = () => {
+            //stwórz uchwyt pola get..., pobierz wartość .value i przypisz do number
+            var number = document.getElementById("field").value;
+
+            if (number > 0) {
+                document.getElementById("result").innerHTML = "positive";
+            } else if (number < 0) {
+                document.getElementById("result").innerHTML = "negative";
+            } else if (number == "0") {
+                document.getElementById("result").innerHTML = "zero";
+            } else {
+                document.getElementById("result").innerHTML = "It is not a number."
+            }
+        }
+    </script>
+
 </head>
 
 <body>
-    <input type="text" />
-    <input type="submit" value="Check" />
+    <input type="text" id="field" />
+    <input type="submit" value="Check" onclick="check()" />
+
+    <div id="result"></div>
 </body>
 
 </html>
