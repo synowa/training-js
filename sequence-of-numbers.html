@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <style>
+        body {
+            background-color: black;
+            color: white;
+        }
+    </style>
+
+    <script type="text/javascript">
+        const show = () => {
+            var number1 = document.getElementById("number1").value;
+            var number2 = document.getElementById("number2").value;
+            var numbers = "";
+
+            for (i = number1; i <= number2; i++) {
+                var numbers = numbers + " " + i;
+            }
+            document.getElementById("sequence-of-numbers").innerHTML = numbers;
+        }
+    </script>
+</head>
+
+<body>
+
+    <input type="text" id="number1" />
+    <input type="text" id="number2" />
+    <input type="submit" value="Show sequence of numbers" onclick="show()" />
+
+    <div id="sequence-of-numbers"></div>
+</body>
+
+</html>
